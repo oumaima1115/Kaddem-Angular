@@ -1,0 +1,66 @@
+<app-header [text]="textCourse"></app-header>
+
+<!-- Courses Start -->
+<div id="rs-courses-3" class="rs-courses-3 sec-spacer">
+    <div class="container">
+        <div class="abt-title">
+            <i (click)="OnAscClick()" class="a bi bi-arrow-up"></i><i (click)="OnDescClick()" class="a bi bi-arrow-down"></i>
+            <h2>OUR COURSES</h2> 
+        </div>
+        <div class="gridFilter">
+            <button (click)="ListeCourses()"           [class]="classALL" data-filter="*">ALL</button>
+            <button (click)="ListeCoursesByCat(text1)" [class]="classDev" data-filter=".filter1">DEVELOPMENT</button>
+            <button (click)="ListeCoursesByCat(text4)" [class]="classDS" data-filter=".filter2">DATA SCIENCE</button>
+            <button (click)="ListeCoursesByCat(text2)" [class]="classIA" data-filter=".filter3">ARTIFICIAL INTELLIGENCE</button>
+            <button (click)="ListeCoursesByCat(text3)" [class]="classBI" data-filter=".filter4">BUISINESS INTELLIGENCE</button>
+        </div>
+        <div    class="row grid">
+            <div  *ngFor="let c of coursesFront" class="col-lg-4 col-md-6 grid-item filter1">
+                <div class="course-item">
+                    <div class="course-img">
+                        <img src="{{c.flyer}}" alt="" />
+                        <span class="course-value">{{c.prixCours}} DT</span>
+                        <div class="course-toolbar">
+                            <h4 class="course-category"><a target="_blank"  [routerLink]="['details']"
+                                                           [queryParams]="{id: c.idCours,name:c.nomCours,teacher:c.nomEnseignant,description:c.descriptionCours,date:c.dateDePublication,price:c.prixCours,image:c.flyer,categorie:c.categorieCours}"  >
+                                                        {{c.nomCours}} </a></h4>
+                            <div class="course-date">
+                                <i class="fa fa-calendar"></i> {{c.dateDePublication}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-body">
+                        <div class="course-desc">
+                            <h4 class="course-title"><a routerLink="/cours/detail">{{c.nomCours}}</a></h4>
+                            <p>
+                               {{c.descriptionCours}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <div class="course-seats">
+                            <i class="fa fa-users"></i> {{c.nomEnseignant}}
+                        </div>
+                        <div class="course-button">
+                            <a href="#">APPLY NOW </a>
+                        </div>
+                    </div>
+                </div>						
+            </div>
+           
+        
+        </div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item disabled"><a class="page-link fa fa-angle-left" href="#" tabindex="-1"></a></li>
+                <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link dotted" href="#">...</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                <li class="page-item"><a class="page-link fa fa-angle-right" href="#"></a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<!-- Courses End -->

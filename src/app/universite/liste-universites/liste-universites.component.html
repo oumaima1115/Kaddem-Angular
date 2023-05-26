@@ -1,0 +1,46 @@
+ <app-header [text]="textUniv"></app-header>
+ <div *ngIf="showComponent == true">
+    <app-universite-detail [univChild]="this.univDetail"></app-universite-detail>
+</div>
+ <!-- Team Start -->
+    <div id="rs-team-2" class="rs-team-2 team-page sec-spacer">
+        <div class="container">
+            <div class="gridFilter">
+                <button (click)="getUniversitiesList()" [class]="classAll" data-filter="*">ALL</button>
+                <button (click)="getUniversitiesByCat(text2)" [class]="classPublic" data-filter=".filter1">PUBLIC</button>
+                <button (click)="getUniversitiesByCat(text1)" [class]="classPrivate" data-filter=".filter1">PRIVATE</button>
+             
+            </div>
+            <div class="row grid">
+                <div class="col-lg-3 col-md-6 col-xs-6 grid-item filter1" *ngFor="let u of universitiesFront">
+                    
+                    <div class="team-item">
+                        <div class="team-img">
+                            <a ><img src="{{u.logoUniv}}" alt="" /></a>
+                            <div class="social-icon">
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="#"><i class="bi bi-share-fill"></i></a>
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-body">
+                            <a   (click)="onClickName(u)" ><h3 class="name">{{u.nomUniv}}</h3></a>
+                            <a > <span class="name">{{u.lienUniv}}</span> </a>
+                        </div>
+                    </div>						
+                </div>
+            </div>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item disabled"><a class="page-link fa fa-angle-left" href="#" tabindex="-1"></a></li>
+                    <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link dotted" href="#">...</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#">6</a></li>
+                    <li class="page-item"><a class="page-link fa fa-angle-right" href="#"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- Team End -->

@@ -1,0 +1,42 @@
+<app-header [text]="textProjet"></app-header>
+<!-- 
+<div *ngIf="showComponent == true">
+   <app-tache-front></app-tache-front>
+</div> -->
+<!-- Team Start -->
+   <div id="rs-team-2" class="rs-team-2 team-page sec-spacer">
+       <div class="container">
+        <!-- search part -->
+           <div class="row grid">
+               <div *ngFor="let projet of projet" class="col-lg-3 col-md-6 col-xs-6 grid-item filter1" >
+                   
+                   <div class="team-item">
+                       <div class="team-img" style=" width:260px;height:260px">
+                           <a [routerLink]="['taches/',projet.idProjet]"><img src="{{projet.logo}}" alt=""/></a>
+                           <div class="social-icon">
+                               <a href="#"><i class="bi bi-facebook"></i></a>
+                               <a href="#"><i class="bi bi-share-fill"></i></a>
+                               <a href="#"><i class="bi bi-linkedin"></i></a>
+                           </div>
+                       </div>
+                       <div class="team-body">
+                           <a [routerLink]="['taches/',projet.idProjet]"><h3 class="name">{{projet.nomProjet}}</h3></a>
+                           <a [routerLink]="['taches/',projet.idProjet]"> <span class="name">{{projet.slogan}}</span> </a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <nav aria-label="Page navigation example">
+               <ul class="pagination">
+                   <li class="page-item disabled"><a class="page-link fa fa-angle-left" href="#" tabindex="-1"></a></li>
+                   <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                   <li class="page-item"><a class="page-link" href="#">2</a></li>
+                   <li class="page-item"><a class="page-link dotted" href="#">...</a></li>
+                   <li class="page-item"><a class="page-link" href="#">5</a></li>
+                   <li class="page-item"><a class="page-link" href="#">6</a></li>
+                   <li class="page-item"><a class="page-link fa fa-angle-right" href="#"></a></li>
+               </ul>
+           </nav>
+       </div>
+   </div>
+   <!-- Team End -->

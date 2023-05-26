@@ -1,0 +1,152 @@
+      <!--Preloader area start here
+      <div class="book_preload">
+        <div class="book">
+            <div class="book__page"></div>
+            <div class="book__page"></div>
+            <div class="book__page"></div>
+        </div>
+    </div>
+    Preloader area end here--> 
+  <!--Full width header Start-->
+  <div class="full-width-header">
+    <!-- Toolbar Start -->
+    <div class="rs-toolbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="rs-toolbar-left">
+                        <div class="welcome-message">
+                            <i class="fa fa-bank"></i><span>Welcome to Edulearn</span> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="rs-toolbar-right">
+                        <div class="toolbar-share-icon">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="apply-btn">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Toolbar End -->
+
+    <!--Header Start-->
+    <header id="rs-header-2" class="rs-header-2">
+        <!-- Menu Start -->
+        <div class="menu-area menu-sticky">
+            <div class="container">
+                <div class="row rs-vertical-middle">
+                    <div class="col-lg-3 col-md-12">
+                        <div class="logo-area">
+                            <a href="index.html"><img src="assets/images/logo-white.png" alt="logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-12 relative">
+                        <div class="main-menu">
+                            <a class="rs-menu-toggle"><i class="fa fa-bars"></i>Menu</a>
+                            <nav class="rs-menu">
+                                <ul class="nav-menu">
+                                    <!-- Home -->
+                                    <li class="menu-item-has-children"> <a href="#" class="home">Home</a>
+                                        <ul class="sub-menu">
+                                          <li><a href="index.html">Home One</a> </li>
+                                          <li class="active"><a href="index2.html">Home Two</a> </li>
+                                          <li><a href="index3.html">Home Three</a></li>
+                                          <li><a href="index4.html">Home Four</a> </li>
+                                          <li><a href="index5.html">Home Five</a> </li>
+                                          <li><a href="instructor-home.html">Home Instructor</a> </li>
+                                          <li><a href="index7.html">Home Seven</a> </li>
+                                          <li><a href="index8.html">Home Eight</a> </li>
+                                        </ul>
+                                    </li>
+                                    <!-- End Home --> 
+                                    <!--About Menu Start-->
+                                    <li class="menu-item-has-children"><a href="about.html">About Us</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="about.html">About One</a></li>
+                                            <li><a href="about2.html">About Two</a></li>
+                                            <li><a href="about3.html">About Three</a></li>
+                                        </ul>
+                                    </li>
+                                    <!--About Menu End--> 
+                                    <!-- Drop Down -->
+                                    <li class="menu-item-has-children"> <a  routerLinkActive="active-link" target="_blank" routerLink="/universite">University</a> </li>
+                                    <!--Courses Menu Start-->
+                                    <li class="menu-item-has-children"> <a  routerLinkActive="active-link"  routerLink="/cours">Courses</a></li>
+                                     
+                                    
+                                    <!--Courses Menu End-->
+                                    
+                                    <!--Events Menu Start-->
+                                    <li class="menu-item-has-children"> <a href="#">Events</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="events.html">Events</a></li>
+                                            <li><a href="events-details.html">Events Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <!--Events Menu End-->
+                                    
+                                    <!--blog Menu Start-->
+                                    <li class="menu-item-has-children"> <a [routerLink]="['/front/projet']">Project</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="blog.html">Issue</a></li>
+                                        </ul>
+                                    </li>
+                                    <!--blog Menu End-->
+
+                                    
+                                    <!--blog Menu Start-->
+                                    <li class="menu-item-has-children"> <a [routerLink]="['/front/equipe']">Team</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="blog.html">Team Detail</a></li>
+                                        </ul>
+                                    </li>
+                                    <!--blog Menu End-->
+                                    
+                                    <!--Contact Menu Start-->
+                                    <li> <a href="contact.html">Contact</a></li>
+                                    <!--Contact Menu End-->
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="searce-box">
+                            <a class="rs-search" data-target=".search-modal" data-toggle="modal" href="#"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>												
+                </div>
+            </div>
+        </div>
+        <!-- Menu End -->
+    </header>
+    <!--Header End-->
+
+</div>
+<!--Full width header End-->
+
+<!-- Breadcrumbs Start -->
+<div class="rs-breadcrumbs bg7 breadcrumbs-overlay">
+    <div class="breadcrumbs-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="page-title">{{text}}</h1>
+                    <ul>
+                        <li>
+                            <a class="active" href="index.html">Home</a>
+                        </li>
+                        <li> {{text}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumbs End -->
